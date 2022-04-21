@@ -26,5 +26,20 @@ $(document).ready(function () {
                 }
                 console.log(data)
         })
+        
+        
+        fetch('https://api.github.com/users/Samson-Law', { 
+             headers: {
+                  'Accept' : 'application/vnd.github.v3+json'
+              }})
+		.then(response => response.json()) //Converting the response to a JSON object
+		.then( data => {
+                    const root = document.querySelector('#root');
+                    root.innerHTML = ` 
+                      <a href=`${data.html_url}`>Name: `${data.name}`</a>
+                     <p>Followers : `${data/followers}`</p>
+                  `
+                })
+		.catch( error => console.error(error));
     })
 })

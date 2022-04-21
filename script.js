@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         fetch("https://api.github.com/user", {
             headers: {
-                'Authorization': 'Basic ' + auth
+                'Authorization': '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'
             }
         })
             .then(function (data) {

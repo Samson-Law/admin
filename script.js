@@ -6,8 +6,7 @@ $(document).ready(function () {
 
         let auth = btoa(username + ":" + password);
 
-
-        fetch("https://api.github.com/user", {
+        fetch("https://api.github.com/users", {
             headers: {
                 'Authorization': 'Basic ' + auth
             }

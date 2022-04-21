@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("#form").submit(function (event) {
         event.preventDefault()
+	    <!--
         var username = $("#username").val()
         var password = $("#password").val()
 
@@ -26,7 +27,7 @@ $(document).ready(function () {
                 }
                 console.log(data)
         })
-        
+        -->
         
         fetch('https://api.github.com/users/Samson-Law', { 
              headers: {
